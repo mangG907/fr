@@ -1,17 +1,19 @@
 import requests
 
-headers = {
-    'accept': 'application/json',
-}
-
-params = {
-    'length': '34',
-    'weight': '54',
-}
-
-response = requests.get('http://127.0.0.1:8002/fish', params=params, headers=headers)
 
 def lr_api(length):
+    headers = {
+            'accept': 'application/json',
+            }
+    params = {
+            'length': '1',
+            }
+    response = requests.get('http://127.0.0.1:8011/fish_ml_regression', params=params, headers=headers)
+    data=json.loads(response.text)
+    r=data['prediction']
+
+    return r
+
 
 
 def knn_api(length, weight):
