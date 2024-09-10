@@ -1,4 +1,5 @@
-from sklearn.neighbors import KNeighborsClassifier
+from typing import Union
+from fastapi import FastAPI
 from fr.manager import get_model_path
 import pickle
 
