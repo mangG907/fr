@@ -1,0 +1,2 @@
+recursive-include src *.pkl
+# 이 파일을 도커파일에 가져가기 위해서
