@@ -3,6 +3,8 @@ from fastapi import FastAPI
 from fr.manager import get_model_path
 import pickle
 
+app = FastAPI()
+
 def run_prediction(length:float):
     model_path = get_model_path()
     with open(model_path, 'rb') as f:
